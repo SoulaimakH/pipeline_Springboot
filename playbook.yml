@@ -1,9 +1,9 @@
 ---
 - name: Example Ansible Playbook
-  hosts: webserver  # Replace 'webserver' with the target host or group
+  
   tasks:
     - name: Run a command on the remote SSH server
-      ansible.builtin.shell: ssh root@localhost -p 2222
+      ansible.builtin.shell: ssh root@172.17.0.2 -p 2222
       register: result
 
     - name: Install Git
