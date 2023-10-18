@@ -3,7 +3,10 @@
   hosts: root@sshcontainer
   gather_facts: no
   tasks:
-    - name: Your Task
+    - name: Install Git
+      yum:
+        name: git
+        state: present
       debug:
         msg: "Your task here"
 
