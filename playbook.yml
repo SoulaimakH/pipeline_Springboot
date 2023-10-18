@@ -1,12 +1,8 @@
 ---
-- name: Install Git on SSH Container
-  hosts: sshcontainer
-  gather_facts: no  # You can set this to 'yes' if you need to gather facts about the target system
-
+- name: Your Playbook Name
+  hosts: root@sshcontainer
+  gather_facts: no
   tasks:
-    - name: Create an empty file
-      file:
-        path: /home/file.txt  # Specify the path 
-        state: touch
-      become: yes
-    
+    - name: Your Task
+      debug:
+        msg: "Your task here"
