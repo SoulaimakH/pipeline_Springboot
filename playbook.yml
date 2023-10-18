@@ -1,0 +1,5 @@
+-hosts: localhost
+ become: true
+ tasks:
+  -name: Install Git
+   yum: name=xxxhttpd state=present
