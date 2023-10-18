@@ -1,8 +1,20 @@
 ---
-- hosts: webserver
-  become: true
+- name: SSH Connection with Ansible
+  hosts: webserver
   tasks:
+    - name: Run a command on the local SSH server
+      ansible.builtin.openssh:
+        host: localhost
+        port: 2222
+        user: root
+        password: your_password  # Replace with your SSH password
+        cmd: uptime  # Replace with the command you want to run
+      register: result
     - name: Install Git
       yum:
         name: git
-        state: present
+        state: present      
+
+    - name: Display the command output
+      debug:
+        var: result.stdout_lines
