@@ -3,7 +3,7 @@
   hosts: webserver
   tasks:
     - name: Run a command on the remote SSH server
-      ansible.builtin.shell: ssh root@172.17.0.2 -p 2222
+      ansible.builtin.shell: ssh -o StrictHostKeyChecking=no root@172.17.0.2 -p 2222
       register: result
 
     - name: Install Git
