@@ -1,6 +1,9 @@
 ---
 - name: Example Ansible Playbook
   hosts: webserver
+  become: yes  # This enables privilege escalation
+  vars:
+    ansible_become_password: fsrklt  # Replace with your actual password
   tasks:
     - name: Run a command on the remote SSH server
       ansible.builtin.shell: ssh -o StrictHostKeyChecking=no root@172.17.0.2 -p 2222
