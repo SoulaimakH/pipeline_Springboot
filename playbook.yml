@@ -4,11 +4,9 @@
   gather_facts: no  # You can set this to 'yes' if you need to gather facts about the target system
 
   tasks:
-    - name: Install Git
-      yum:
-        name: git
-        state: present
-
-    - name: Debug Message
-      debug:
-        msg: "Git is installed on the target host (sshcontainer)."
+    - name: Create an empty file
+      file:
+        path: /home/file.txt  # Specify the path 
+        state: touch
+      become: yes
+    
