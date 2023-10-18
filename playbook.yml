@@ -1,6 +1,6 @@
 ---
 - name: Example Ansible Playbook
-  hosts: 172.17.0.2 -p 2222
+  hosts: webserver
   tasks:
     - name: Run a command on the remote SSH server
       ansible.builtin.shell: ssh root@172.17.0.2 -p 2222
