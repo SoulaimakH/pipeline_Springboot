@@ -1,2 +1,2 @@
 [webserver]
-localhost:2222
+sshcontainer:2222
