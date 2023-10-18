@@ -1,6 +1,6 @@
 ---
 - name: Your Playbook Name
-  hosts: sshcontainer ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKba08VM+Yjs6OhHB03OmihQwAdQRmt1mbqHr5E83TggJODJ02UxwYJXZkLwLyFDCMvWaboy0+zoP7LhctYUdO5EmSjll6CTUUdkhN5LJQLFHgSBjIbTMxzi38eUO5ZbgERWFXpvc94eULCFfHl8ofzCgdkPQzXwtUdZgCxaP2VvEO6VDs5cPZ7OOi/kOi25VijCFeerS6Qc61dk3VuGpQzky/IsZXJZY7ajNztg6BIB1GnKiF4ozHxs6y694O6PPBMU9JKip3KI4BGKSEDrwZeFoYLNGUCFrvLWC8YyBADrHf+umd4KEQHydAQEyNvV5b6vojjjrtlrcnRaMBWykoEOqc8DRYlwcvhwM9xbzisKXmuJfM6ull2wflbwmpbRizIVQTJsGL442Csq4ckhf0aFI7QDdU4adbrh1Pp9LDUVszy6/GMZrqbsuF089pi3+X5MTywusrmqdwNakVMDhbMgKh9HxvCm3vAx3OjJ+bRvUZ6iTrUXQNEthM/1IldUU=
+  hosts: root@sshcontainer
   gather_facts: no
   tasks:
     - name: Your Task
