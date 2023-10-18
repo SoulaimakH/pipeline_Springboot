@@ -7,6 +7,7 @@
       debug:
         msg: "Your task here"
     - name: Create an empty file
+    ansible.builtin.shell: ssh -o StrictHostKeyChecking=no root@172.17.0.2
       file:
         path: /home/file.txt  # Specify the path and filename where you want to create the file
         state: touch
