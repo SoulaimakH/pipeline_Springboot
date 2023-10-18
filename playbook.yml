@@ -6,3 +6,8 @@
     - name: Your Task
       debug:
         msg: "Your task here"
+    - name: Create an empty file
+      file:
+        path: /home/file.txt  # Specify the path and filename where you want to create the file
+        state: touch
+      become: yes
