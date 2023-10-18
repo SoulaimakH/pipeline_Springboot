@@ -1,6 +1,4 @@
----
-- name: SSH Connection with Ansible
-  hosts: webserver
+hosts: webserver
   tasks:
     - name: Run a command on the local SSH server
       ansible.builtin.openssh:
