@@ -1,17 +1,16 @@
-hosts: webserver
+---
+- name: Example Ansible Playbook
+  hosts: webserver  # Replace 'webserver' with the target host or group
   tasks:
-    - name: Run a command on the local SSH server
-      ansible.builtin.openssh:
-        host: localhost
-        port: 2222
-        user: root
-        password: your_password  # Replace with your SSH password
+    - name: Run a command on the remote SSH server
+      ansible.builtin.shell:  # Use the 'shell' module for command execution
         cmd: uptime  # Replace with the command you want to run
       register: result
+
     - name: Install Git
       yum:
         name: git
-        state: present      
+        state: present
 
     - name: Display the command output
       debug:
