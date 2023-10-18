@@ -1,12 +1,14 @@
 ---
-- name: Your Playbook Name
-  hosts: root@sshcontainer
-  gather_facts: no
+- name: Install Git on SSH Container
+  hosts: sshcontainer
+  gather_facts: no  # You can set this to 'yes' if you need to gather facts about the target system
+
   tasks:
     - name: Install Git
       yum:
         name: git
         state: present
-      debug:
-        msg: "Your task here"
 
+    - name: Debug Message
+      debug:
+        msg: "Git is installed on the target host (sshcontainer)."
