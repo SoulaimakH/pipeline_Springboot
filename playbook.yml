@@ -3,8 +3,7 @@
   hosts: webserver  # Replace 'webserver' with the target host or group
   tasks:
     - name: Run a command on the remote SSH server
-      ansible.builtin.shell:  # Use the 'shell' module for command execution
-        cmd: uptime  # Replace with the command you want to run
+      ansible.builtin.shell:  ansible.builtin.shell: ssh root@localhost -p 2222
       register: result
 
     - name: Install Git
