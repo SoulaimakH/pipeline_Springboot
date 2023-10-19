@@ -17,7 +17,7 @@ pipeline {
         }
         
         
-        stage('maven install') {
+        stage('build artifact') {
             steps {
                  sh "mvn clean install"
 
@@ -60,11 +60,11 @@ pipeline {
           ansiblePlaybook  installation: 'ansible', inventory: 'Iventory', playbook: 'playbook.yml'
           
           sh "echo 'fin'"
-      //  sh '''
-        //  ansible --version
-          //ansible-playbook --version
-          //ansible-galaxy --version
-        //'''
+      sh '''
+        ansible --version
+          ansible-playbook --version
+          ansible-galaxy --version
+        '''
          slackSend message: "pipline is successfully executed"   
       }
     }
